@@ -1,4 +1,3 @@
-# probabilitic_inferencee_interface
 
 ## Project setup
 ```
