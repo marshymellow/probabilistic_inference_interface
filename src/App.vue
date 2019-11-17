@@ -1,17 +1,82 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <Menu v-bind:menuItems="menuItems"/>
+    {{menuItems[1].label}} -->
+
+
+
+    <div id="app">
+        <Menu v-bind:menuItems="menuItems"/>
+        {{menuItems[1].label}}
+
+        {{menuItems}}
+        {{Diagnosis }}
+
   </div>
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Menu from "@/components/Menu";
+  import Diagnosis from "@/assets/diagnosis.json"
+  import Plots from "@/assets/plots.json"
+  import Stats from "@/assets/stats.json"
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Menu,
+
+  },
+
+
+  data(){
+    return{
+        Diagnosis : Diagnosis,
+        Plots : Plots,
+        Stats : Stats,
+        menuItems: [
+        {
+          label: "Plots"
+        },
+        {
+          label: "Stats",
+          sub_options:[
+            {
+              label:"Test Function"
+            },
+            {
+              label:"Loo"
+            },
+            {
+              label:"Summary"
+            },
+            {
+              label:"Waic"
+            }
+          ]
+        },
+        {
+          label: "Diagnosis",
+          sub_options:[
+            {
+              label:"Bfmi"
+            },
+            {
+              label:"Ess"
+            },
+            {
+              label:"Rhat"
+            },
+            {
+              label:"Mcse"
+            }
+          ]
+        }
+      ]
+
+    }
   }
 }
 </script>
@@ -21,8 +86,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
