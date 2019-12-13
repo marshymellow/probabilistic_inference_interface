@@ -1,15 +1,11 @@
 <template>
-    <!-- <Menu v-bind:menuItems="menuItems"/>
-    {{menuItems[1].label}} -->
+
 
 
 
     <div id="app">
         <Menu v-bind:menuItems="menuItems"/>
-        {{menuItems[1].label}}
 
-        {{menuItems}}
-        {{Diagnosis }}
 
   </div>
 
@@ -38,7 +34,8 @@ export default {
         Stats : Stats,
         menuItems: [
         {
-          label: "Plots"
+          label: "Plots",
+            content: Plots,
         },
         {
           label: "Stats",
@@ -61,16 +58,21 @@ export default {
           label: "Diagnosis",
           sub_options:[
             {
-              label:"Bfmi"
+              label:"Bfmi",
+                content : Diagnosis.options[0]
             },
             {
-              label:"Ess"
+              label:"Ess",
+                content : Diagnosis.options[1]
             },
             {
-              label:"Rhat"
+              label:"Rhat",
+                content : Diagnosis.options[2]
             },
             {
-              label:"Mcse"
+              label:"Mcse",
+                content : Diagnosis.options[3]
+
             }
           ]
         }
