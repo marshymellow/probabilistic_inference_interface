@@ -3,11 +3,12 @@
 
 
 
-    <div id="app">
-        <Menu v-bind:menuItems="menuItems"/>
+    <div class="menu">
+       <Menu v-bind:menuItems="menuItems"/>
+
+    </div>
 
 
-  </div>
 
 
 </template>
@@ -15,8 +16,9 @@
 <script>
   import Menu from "@/components/Menu";
   import Diagnosis from "@/assets/diagnosis.json"
-  import Plots from "@/assets/plots.json"
+  import Plots from "@/assets/plots1.png"
   import Stats from "@/assets/stats.json"
+
 
 
 export default {
@@ -79,7 +81,18 @@ export default {
       ]
 
     }
-  }
+  },
+
+  computed:{
+      diag2(){
+          let diag2=[]
+
+
+          return diag2
+
+      }
+  },
+
 }
 </script>
 
@@ -89,7 +102,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
   color: #2c3e50;
 
 }
+    .menu{
+
+
+    }
 </style>
