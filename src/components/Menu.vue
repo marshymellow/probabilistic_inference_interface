@@ -98,6 +98,11 @@
                 <b-table striped bordered  :items="waic" :fields="waic_fields"></b-table>
 
             </p>
+            <p v-if="selectedIndex==12">
+
+                <b-table striped bordered  :items="summary" ></b-table>
+
+            </p>
 
 
             </div>
@@ -351,6 +356,93 @@
                         // Variant applies to the whole column, including the header and footer
                         variant: 'danger'
                     }],
+                summary:[
+                    {
+                        " ": "gamma[0]",
+                        mean: "1.428",
+                        sd: "0.047",
+                        "hpd_3%":"1.338",
+                        "hpd_97%":"1.511",
+                        "mcse_mean":"0.001",
+                        "mcse_se":"0.001",
+                        "ess_mean":"1105.0",
+                        "ess_sd":"1094.0",
+                        "ess_bulk":"1106.0",
+                        "ess_tail":"1427.0",
+                        "r_hat":"1.00"
+                    },
+                    {
+                        " ": "gamma[1]",
+                        mean: "0.701",
+                        sd: "0.086",
+                        "hpd_3%":"0.535",
+                        "hpd_97%":"0.859",
+                        "mcse_mean":"0.002",
+                        "mcse_se":"0.002",
+                        "ess_mean":"1198.0",
+                        "ess_sd":"1198.0",
+                        "ess_bulk":"1203.0",
+                        "ess_tail":"1427.0",
+                        "r_hat":"1.00"
+                    },
+                    {
+                        " ": "gamma[2]",
+                        mean: "0.385",
+                        sd: "0.168",
+                        "hpd_3%":"0.059",
+                        "hpd_97%":"0.754",
+                        "mcse_mean":"0.005",
+                        "mcse_se":"0.004",
+                        "ess_mean":"1392.0",
+                        "ess_sd":"1392.0",
+                        "ess_bulk":"1393.0",
+                        "ess_tail":"1443.0",
+                        "r_hat":"1.00"
+                    },
+                    {
+                        " ": "...",
+                        mean: "...",
+                        sd: "...",
+                        "hpd_3%":"...",
+                        "hpd_97%":"...",
+                        "mcse_mean":"...",
+                        "mcse_se":"...",
+                        "ess_mean":"...",
+                        "ess_sd":"...",
+                        "ess_bulk":"...",
+                        "ess_tail":"...",
+                        "r_hat":"..."
+                    },
+                    {
+                        " ": "a[918]",
+                        mean: "1.649",
+                        sd: "0.137",
+                        "hpd_3%":"1.408",
+                        "hpd_97%":"1.923",
+                        "mcse_mean":"0.003",
+                        "mcse_se":"0.002",
+                        "ess_mean":"2616.0",
+                        "ess_sd":"2616.0",
+                        "ess_bulk":"2618.0",
+                        "ess_tail":"1468.0",
+                        "r_hat":"1.01"
+                    },
+                    {
+                        " ": "sigma_y",
+                        mean: "0.731",
+                        sd: "0.018",
+                        "hpd_3%":"0.697",
+                        "hpd_97%":"0.765",
+                        "mcse_mean":"0.000",
+                        "mcse_se":"0.000",
+                        "ess_mean":"1414.0",
+                        "ess_sd":"1403.0",
+                        "ess_bulk":"1437.0",
+                        "ess_tail":"906.0",
+                        "r_hat":"1.00"
+                    },
+
+                ],
 
 
 
