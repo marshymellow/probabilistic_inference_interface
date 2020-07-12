@@ -1,4 +1,4 @@
-
+This is a VUE.JS interface for visualizing ArViz results 
 ## Project setup
 ```
 npm install
